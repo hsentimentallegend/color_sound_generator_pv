@@ -1,7 +1,5 @@
 streamlit
-cv2
+opencv-python
 numpy
 pandas
 synthesizer
-ctypes.wintypes
-typing_extensions
