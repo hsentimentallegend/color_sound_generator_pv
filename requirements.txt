@@ -1,7 +1,7 @@
 streamlit
-opencv-python==4.5.5.64
+cv2
 numpy
 pandas
-synthesizer==0.2.0
+synthesizer
 ctypes.wintypes
 typing_extensions
