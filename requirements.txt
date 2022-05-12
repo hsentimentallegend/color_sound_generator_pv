@@ -3,3 +3,7 @@ opencv-python
 numpy
 pandas
 synthesizer
+ctypes.wintypes
+tkinter
+turtle
+typing_extensions
