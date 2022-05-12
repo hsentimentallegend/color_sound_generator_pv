@@ -1,11 +1,8 @@
-from ctypes.wintypes import RGB
-from tkinter import Button
 from turtle import bgcolor, color, onclick
-from typing_extensions import Self
 import streamlit as st
 import cv2
 import numpy as np
-import pandas as pd
+
 
 from synthesizer import Synthesizer, Waveform, Writer,Player #synthのオシレーターインポート
 
