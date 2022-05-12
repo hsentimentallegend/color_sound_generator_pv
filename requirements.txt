@@ -3,6 +3,5 @@ opencv-python
 numpy
 pandas
 synthesizer
-tkinter
 turtle
 typing_extensions
