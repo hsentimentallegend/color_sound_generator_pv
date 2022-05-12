@@ -1,9 +1,6 @@
 streamlit
 opencv-python==4.5.5.64
-numpy
-pandas
-synthesizer
-ctypes.wintypes
-tkinter
-turtle
-typing_extensions
+numpy==1.21.6
+pandas==1.4.2
+synthesizer==0.2.0
+typing_extensions==4.2.0
