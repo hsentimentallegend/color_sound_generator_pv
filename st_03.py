@@ -1,9 +1,7 @@
-from turtle import bgcolor, color, onclick
 import streamlit as st
 import cv2
 import numpy as np
-
-
+import tkinter as TK
 from synthesizer import Synthesizer, Waveform, Writer,Player #synthのオシレーターインポート
 
 
