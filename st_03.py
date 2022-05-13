@@ -1,7 +1,7 @@
 import streamlit as st
 import cv2
 import numpy as np
-from synthesizer import Synthesizer, Waveform, Writer,Player 
+from synthesizer import Synthesizer, Waveform, Writer,Player
 
 
 st.title('Color Sound Generator_Plot_Version_0.1')
