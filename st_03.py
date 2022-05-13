@@ -63,6 +63,7 @@ if img_file_buffer is not None:
 
         player = Player()
         player.open_stream()
+        player.enumerate_device()
       
         synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
         player.play_wave(synth.generate_constant_wave(800.0, 5.0))
@@ -80,6 +81,7 @@ if img_file_buffer is not None:
 
         player = Player()
         player.open_stream()
+        player.enumerate_device()
       
         synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
         player.play_wave(synth.generate_constant_wave(1200.0, 5.0))
@@ -97,6 +99,7 @@ if img_file_buffer is not None:
 
         player = Player()
         player.open_stream()
+        player.enumerate_device()
       
         synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
         player.play_wave(synth.generate_constant_wave(160.0, 5.0))
