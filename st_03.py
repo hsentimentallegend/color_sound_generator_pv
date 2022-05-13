@@ -1,7 +1,7 @@
 import streamlit as st
 import cv2
 import numpy as np
-import winsound
+from synthesizer import Synthesizer, Waveform, Writer,Player
 
 
 st.title('Color Sound Generator_Plot_Version_0.1')
@@ -56,7 +56,17 @@ if img_file_buffer is not None:
     if st.button('generate sound-with Synthsyzer'):
        duration_ms=5000 
        if value<200 and value >100: 
-        winsound.Beep(1002, duration_ms) #ド(523Hz)
+        synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
+        wave = synth.generate_constant_wave(frequency=800.0, length=5.0)
+        writer = Writer()
+        writer.write_wave("sine.wav", wave)
+
+        player = Player()
+        player.open_stream()
+        player.enumerate_device()
+      
+        synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
+        player.play_wave(synth.generate_constant_wave(800.0, 5.0))
 
         st.write('## success to Generate Mid!!!')
         st.image('img-aaa.jpg')
@@ -64,14 +74,35 @@ if img_file_buffer is not None:
 
 
        elif value>200:
-        winsound.Beep(902, duration_ms) #ド(523Hz)
+        synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
+        wave = synth.generate_constant_wave(frequency=1200.0, length=5.0)
+        writer = Writer()
+        writer.write_wave("sine.wav", wave)
+
+        player = Player()
+        player.open_stream()
+        player.enumerate_device()
+      
+        synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
+        player.play_wave(synth.generate_constant_wave(1200.0, 5.0))
+
 
         st.write('## success to Generate Hi!!!')
         st.image('img-aaa.jpg')
 
 
        else : 
-        winsound.Beep(1002, duration_ms) #ド(523Hz)
+        synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
+        wave = synth.generate_constant_wave(frequency=160.0, length=5.0)
+        writer = Writer()
+        writer.write_wave("sine.wav", wave)
+
+        player = Player()
+        player.open_stream()
+        player.enumerate_device()
+      
+        synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
+        player.play_wave(synth.generate_constant_wave(160.0, 5.0))
          
         st.write('## success to Generate Low!!!')
         st.image('img-aaa.jpg')
