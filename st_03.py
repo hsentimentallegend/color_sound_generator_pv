@@ -2,7 +2,7 @@ import streamlit as st
 import cv2
 import numpy as np
 from synthesizer import Synthesizer, Waveform, Writer,Player
-
+import pyaudio
 
 st.title('Color Sound Generator_Plot_Version_0.1')
 img_file_buffer = st.camera_input("Take a picture, and Generate Sound with the value of the Color")
