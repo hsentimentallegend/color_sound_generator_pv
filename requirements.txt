@@ -3,4 +3,4 @@ opencv-python-headless
 numpy
 synthesizer
 typing_extensions
-ctypes
+ctypes.wintypes
