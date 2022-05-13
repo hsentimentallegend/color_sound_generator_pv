@@ -51,63 +51,47 @@ if img_file_buffer is not None:
     
 
     value=(int(total))
-
-
-    if st.button('generate sound-with Synthsyzer'):
-       duration_ms=5000 
-       if value<200 and value >100: 
-        synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
-        wave = synth.generate_constant_wave(frequency=800.0, length=5.0)
-        writer = Writer()
-        writer.write_wave("sine.wav", wave)
-
-        player = Player()
-        player.open_stream()
-        player.enumerate_device()
-      
-        synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
-        player.play_wave(synth.generate_constant_wave(800.0, 5.0))
-
-        st.write('## success to Generate Mid!!!')
-        st.image('img-aaa.jpg')
+    
+    if value<200 and value >100: 
+     synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
+     wave = synth.generate_constant_wave(frequency=800.0, length=5.0)
+     writer = Writer()
+     writer.write_wave("sine.wav", wave)
 
 
 
-       elif value>200:
-        synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
-        wave = synth.generate_constant_wave(frequency=1200.0, length=5.0)
-        writer = Writer()
-        writer.write_wave("sine.wav", wave)
-
-        player = Player()
-        player.open_stream()
-        player.enumerate_device()
-      
-        synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
-        player.play_wave(synth.generate_constant_wave(1200.0, 5.0))
+     st.write('## success to Generate Mid!!!')
 
 
-        st.write('## success to Generate Hi!!!')
-        st.image('img-aaa.jpg')
 
 
-       else : 
-        synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
-        wave = synth.generate_constant_wave(frequency=160.0, length=5.0)
-        writer = Writer()
-        writer.write_wave("sine.wav", wave)
+    elif value>200:
+     synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
+     wave = synth.generate_constant_wave(frequency=1200.0, length=5.0)
+     writer = Writer()
+     writer.write_wave("sine.wav", wave)
 
-        player = Player()
-        player.open_stream()
-        player.enumerate_device()
-      
-        synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
-        player.play_wave(synth.generate_constant_wave(160.0, 5.0))
+
+
+
+     st.write('## success to Generate Hi!!!')
+
+
+    else : 
+     synth = Synthesizer(osc1_waveform=Waveform.sine, osc1_volume=1.0, use_osc2=False)
+     wave = synth.generate_constant_wave(frequency=160.0, length=5.0)
+     writer = Writer()
+     writer.write_wave("sine.wav", wave)
+
+
          
-        st.write('## success to Generate Low!!!')
-        st.image('img-aaa.jpg')
+     st.write('## success to Generate Low!!!')
 
-       
+
+    audio_file = open('sine.wav', 'rb')
+    audio_bytes = audio_file.read()
+
+    st.audio(audio_bytes, format='audio/ogg')
 
     link = '[Share Picture with Instagram](https://www.instagram.com/)'
     st.markdown(link, unsafe_allow_html=True)
