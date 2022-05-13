@@ -1,9 +1,12 @@
+import csv
+from ctypes.wintypes import RGB
 from turtle import bgcolor, color, onclick
+import tkinter as TK
+from typing_extensions import Self
 import streamlit as st
 import cv2
-import tkinter as TK
 import numpy as np
-
+import pandas as pd
 
 from synthesizer import Synthesizer, Waveform, Writer,Player #synthのオシレーターインポート
 
