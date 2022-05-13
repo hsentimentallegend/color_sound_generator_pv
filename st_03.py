@@ -119,6 +119,3 @@ if img_file_buffer is not None:
     link = '[Website](https://www.mehatasentimentallegend.com/)'
     st.markdown(link, unsafe_allow_html=True)
 
-
-
-
